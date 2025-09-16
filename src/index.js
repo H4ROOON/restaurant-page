@@ -1,10 +1,20 @@
-import './style.css';
+import loadHome from "./home";
 
-document.body.innerHTML = `
-  <h1>Welcome to My Restaurant</h1>
-  <button id="btn">Click Me</button>
-`;
+function clearContent() {
+    document.getElementById("content").innerHTML = "";
 
-document.getElementById("btn").addEventListener("click", () => {
-    alert("Welcome to my restaurant!");
-});
+}
+
+function init() {
+    const homeBtn = document.getElementById("home-btn");
+    homeBtn.addEventListener("click", () => {
+        clearContent();
+        loadHome();
+
+    });
+
+}
+
+
+init();
+loadHome();
