@@ -10,17 +10,18 @@ function clearContent() {
 }
 
 function init() {
-    const homeBtn = document.getElementById("home-btn");
+    const homeBtn = document.getElementById("btn");
     homeBtn.addEventListener("click", () => {
         clearContent();
         loadHome();
 
     });
+    const menuBtn = document.getElementById("menuBtn");
     menuBtn.addEventListener("click", () => {
         clearContent();
         loadMenu();
     });
-
+    const contactBtn = document.getElementById("contactBtn");
     contactBtn.addEventListener("click", () => {
         clearContent();
         loadContact();
